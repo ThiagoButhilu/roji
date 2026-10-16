@@ -28,7 +28,7 @@
   position: relative;
 }
 
-.how__path {
+.how__path--desktop {
   display: none;
 }
 
@@ -130,7 +130,7 @@
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .how__path {
+  .how__path--desktop {
     display: block;
     position: absolute;
     left: 0;

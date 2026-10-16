@@ -131,7 +131,7 @@ export default function HowItWorks() {
         </motion.div>
 
         <div className="how__steps-wrap" ref={wrapRef}>
-          <svg className="how__path" viewBox="0 0 900 90" preserveAspectRatio="none" aria-hidden="true">
+          <svg className="how__path how__path--desktop" viewBox="0 0 900 90" preserveAspectRatio="none" aria-hidden="true">
             <motion.path
               d={pathD}
               fill="none"
