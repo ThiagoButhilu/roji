@@ -41,6 +41,7 @@
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -210,6 +211,10 @@
   .hero__copy {
     flex: 1;
     max-width: 520px;
+  }
+
+  .hero__actions {
+    justify-content: flex-start;
   }
 
   .hero__visual {

@@ -30,7 +30,7 @@
 }
 
 .projects__head .btn {
-  align-self: flex-start;
+  align-self: center;
 }
 
 .projects__grid {
@@ -166,5 +166,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+  }
+
+  .projects__head .btn {
+    align-self: flex-end;
   }
 }

@@ -1,11 +1,11 @@
 .how {
-  background: var(--salvia);
+  background: var(--terracota);
   padding: 96px 0;
-  color: var(--carvao);
+  color: var(--cal);
 }
 
 .how__eyebrow {
-  color: var(--carvao);
+  color: var(--cal);
 }
 
 .how__title {
@@ -16,10 +16,11 @@
   letter-spacing: -0.02em;
   margin: 16px 0 56px;
   max-width: 640px;
+  color: var(--cal);
 }
 
 .how__title .italic {
-  color: var(--terracota-dark);
+  color: var(--linho);
   font-style: italic;
 }
 
@@ -31,8 +32,18 @@
   display: none;
 }
 
+.how__path--mobile {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .how__steps {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px 24px;
@@ -43,6 +54,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 230px;
+}
+
+.how__steps > .how__step:nth-child(odd) {
+  justify-self: start;
+}
+
+.how__steps > .how__step:nth-child(even) {
+  justify-self: end;
 }
 
 .how__pebble {
@@ -81,7 +101,7 @@
 .how__step p {
   font-size: 15px;
   line-height: 1.55;
-  color: #353228;
+  color: var(--linho);
   margin: 0 auto;
   max-width: 260px;
 }
@@ -89,6 +109,19 @@
 @media (min-width: 620px) {
   .how__steps {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how__step {
+    max-width: none;
+  }
+
+  .how__steps > .how__step:nth-child(odd),
+  .how__steps > .how__step:nth-child(even) {
+    justify-self: center;
+  }
+
+  .how__path--mobile {
+    display: none;
   }
 }
 

@@ -44,6 +44,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   background: var(--cal);
   color: var(--carvao);
@@ -51,6 +52,7 @@
   padding: 20px 22px;
   text-decoration: none;
   max-width: 420px;
+  margin: 0 auto;
 }
 
 .contact__ig-avatar {
@@ -222,5 +224,10 @@
 
   .contact__form {
     padding: 44px;
+  }
+
+  .contact__ig-card {
+    justify-content: flex-start;
+    margin: 0;
   }
 }

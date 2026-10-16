@@ -116,36 +116,48 @@
   color: #a59e92;
 }
 
-/* mobile diagram: stacked chips -> dashed divider -> card */
+/* mobile diagram: badges spread in rows, lines flowing into the card */
 .idea__diagram--mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
 }
 
-.idea__diagram--mobile .idea__card {
-  max-width: 320px;
-}
-
-.idea__chips {
+.idea__chip-zone {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  max-width: 480px;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
 }
 
-.idea__connector {
-  width: 2px;
-  height: 36px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #7a736a 0,
-    #7a736a 6px,
-    transparent 6px,
-    transparent 12px
-  );
+.idea__diagram--mobile .idea__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.idea__diagram--mobile .idea__chips {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 440 / 320;
+}
+
+.idea__diagram--mobile .idea__chip--floating {
+  position: absolute;
+}
+
+.idea__card-anchor {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 320px;
+  align-self: center;
 }
 
 /* desktop diagram: scattered chips converging into the card via curved lines */
