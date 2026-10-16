@@ -1,0 +1,135 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(242, 238, 231, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  border-color: rgba(43, 41, 37, 0.08);
+  box-shadow: 0 8px 24px rgba(43, 41, 37, 0.06);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 76px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand__logo {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.site-nav {
+  display: none;
+  align-items: center;
+  gap: 32px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--carvao);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background: var(--terracota);
+  transition: right 0.25s ease;
+}
+
+.site-nav a:hover::after {
+  right: 0;
+}
+
+.site-header__actions {
+  display: none;
+  align-items: center;
+  gap: 16px;
+}
+
+.instagram-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--carvao);
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: inline-flex;
+  background: none;
+  border: none;
+  color: var(--carvao);
+  padding: 6px;
+}
+
+.mobile-menu {
+  overflow: hidden;
+  background: var(--cal);
+  border-bottom: 1px solid rgba(43, 41, 37, 0.08);
+}
+
+.mobile-menu__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 8px 24px 28px;
+  font-weight: 500;
+}
+
+.mobile-menu__inner a {
+  text-decoration: none;
+  color: var(--carvao);
+  font-size: 17px;
+}
+
+.mobile-menu__ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.mobile-menu__inner .btn {
+  margin-top: 6px;
+  width: 100%;
+}
+
+@media (min-width: 1080px) {
+  .site-nav {
+    display: flex;
+  }
+
+  .site-header__actions {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}

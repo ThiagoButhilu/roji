@@ -1,0 +1,56 @@
+.captcha {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.captcha__label {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--carvao);
+}
+
+.captcha__row {
+  display: flex;
+  gap: 10px;
+}
+
+.captcha__row input {
+  box-sizing: border-box;
+  flex: 1;
+  height: 52px;
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: #fffdf9;
+  padding: 0 16px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--carvao);
+}
+
+.captcha__row input:focus {
+  outline: none;
+  border-color: var(--terracota);
+}
+
+.captcha__refresh {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-soft);
+  background: #fffdf9;
+  color: var(--carvao);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.captcha__refresh:hover {
+  background: var(--linho);
+}
+
+.captcha__refresh:active {
+  transform: rotate(90deg);
+}

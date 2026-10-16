@@ -1,0 +1,157 @@
+:root {
+  --terracota: #b5583a;
+  --terracota-dark: #8e4128;
+  --terracota-light: #e8946f;
+  --salvia: #9aa788;
+  --linho: #e6e0d6;
+  --carvao: #2b2925;
+  --carvao-soft: #35322d;
+  --cal: #f2eee7;
+
+  --text-muted: #6b655b;
+  --border-soft: #cfc7b8;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Karla', sans-serif;
+
+  --container: 1248px;
+  --radius-sm: 14px;
+  --radius-lg: 26px;
+  --radius-pill: 999px;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cal);
+  color: var(--carvao);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 900px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+  line-height: 1;
+  font-family: var(--font-body);
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid transparent;
+  padding: 15px 28px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(43, 41, 37, 0.14);
+}
+
+.btn:active {
+  transform: scale(0.97) translateY(0);
+  box-shadow: none;
+}
+
+.btn-primary {
+  background: var(--terracota);
+  color: var(--cal);
+}
+
+.btn-primary:hover {
+  background: var(--terracota-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--carvao);
+  border-color: var(--carvao);
+}
+
+.btn-secondary:hover {
+  background: var(--carvao);
+  color: var(--cal);
+}
+
+.btn-dark {
+  background: var(--carvao);
+  color: var(--cal);
+}
+
+.btn-dark:hover {
+  background: #44403a;
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: var(--cal);
+  border-color: rgba(242, 238, 231, 0.4);
+}
+
+.btn-outline-light:hover {
+  background: var(--cal);
+  color: var(--carvao);
+}
+
+section {
+  position: relative;
+}
+
+::selection {
+  background: var(--terracota);
+  color: var(--cal);
+}

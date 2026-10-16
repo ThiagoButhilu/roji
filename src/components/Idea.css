@@ -1,0 +1,211 @@
+.idea {
+  background: var(--carvao);
+  color: var(--cal);
+  padding: 96px 0;
+}
+
+.idea__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.idea__eyebrow {
+  color: var(--terracota-light);
+}
+
+.idea__title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 18px 0 24px;
+  max-width: 620px;
+}
+
+.idea__title .italic {
+  font-style: italic;
+  color: var(--terracota-light);
+}
+
+.idea__lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--linho);
+  max-width: 500px;
+  margin: 0;
+}
+
+/* shared chip look */
+.idea__chip {
+  display: inline-flex;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid #5b554d;
+  color: var(--linho);
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* card look (shared) */
+.idea__card {
+  width: 100%;
+  background: var(--cal);
+  color: var(--carvao);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.idea__card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.idea__card-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 1.15;
+  margin: 18px 0 16px;
+}
+
+.idea__card-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.idea__card-skeleton span {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--linho);
+}
+
+.idea__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.idea__card-tags span {
+  background: var(--salvia);
+  color: var(--carvao);
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.idea__card-cta {
+  padding: 13px 24px;
+  font-size: 14px;
+}
+
+.idea__caption {
+  font-weight: 500;
+  font-size: 14px;
+  color: #a59e92;
+}
+
+/* mobile diagram: stacked chips -> dashed divider -> card */
+.idea__diagram--mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.idea__diagram--mobile .idea__card {
+  max-width: 320px;
+}
+
+.idea__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.idea__connector {
+  width: 2px;
+  height: 36px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #7a736a 0,
+    #7a736a 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* desktop diagram: scattered chips converging into the card via curved lines */
+.idea__diagram--desktop {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .idea__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .idea__copy {
+    flex: 0 1 420px;
+  }
+
+  .idea__diagram--mobile {
+    display: none;
+  }
+
+  .idea__diagram--desktop {
+    display: block;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 640 / 520;
+  }
+
+  .idea__lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .idea__diagram--desktop .idea__chip--floating {
+    position: absolute;
+  }
+
+  .idea__card-wrap {
+    position: absolute;
+    left: 53.125%;
+    top: 40.38%;
+    width: 46.875%;
+    height: 65.38%;
+  }
+
+  .idea__diagram--desktop .idea__card {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .idea__caption--desktop {
+    position: absolute;
+    left: 53.125%;
+    top: calc(40.38% + 65.38% + 16px);
+  }
+}

@@ -1,0 +1,83 @@
+.about {
+  background: var(--carvao);
+  color: var(--cal);
+  padding: 96px 0;
+  overflow: hidden;
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 48px;
+  align-items: center;
+}
+
+.about__stones {
+  width: 100%;
+  max-width: 320px;
+}
+
+.about__stones img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.about__copy {
+  max-width: 600px;
+}
+
+.about__eyebrow {
+  color: var(--terracota-light);
+}
+
+.about__title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 16px 0 28px;
+}
+
+.about__title .italic {
+  font-style: italic;
+  color: var(--terracota-light);
+}
+
+.about__copy p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--linho);
+  margin: 0 0 18px;
+}
+
+.about__signature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 28px;
+  color: var(--linho);
+}
+
+.about__signature-line {
+  width: 40px;
+  height: 2px;
+  background: var(--terracota);
+  flex-shrink: 0;
+}
+
+@media (min-width: 980px) {
+  .about__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 72px;
+  }
+
+  .about__stones {
+    flex: 1;
+    max-width: 380px;
+  }
+}
