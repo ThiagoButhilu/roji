@@ -112,24 +112,22 @@ export default function Hero() {
             </div>
 
             <div className="hero__phone" style={{ rotate: 3 }}>
-              <div className="hero__phone-bezel">
-                <AnimatePresence mode="wait">
-                  <motion.video
-                    key={project.mobileVideo}
-                    src={project.mobileVideo}
-                    poster={project.mobilePoster}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    aria-label={`Site do ${project.name} no celular`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.4, ease: 'easeOut' }}
-                  />
-                </AnimatePresence>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.video
+                  key={project.mobileVideo}
+                  src={project.mobileVideo}
+                  poster={project.mobilePoster}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label={`Site do ${project.name} no celular`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                />
+              </AnimatePresence>
             </div>
 
             {floatingChips.map((chip) => (

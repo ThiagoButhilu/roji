@@ -43,33 +43,33 @@ export default function Projects() {
               variants={{ hover: { y: -6 } }}
             >
               <div className="project-card__frame">
-                <motion.video
-                  src={project.desktopVideo}
-                  poster={project.desktopPoster}
-                  aria-label={`Site de ${project.name} no computador`}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  variants={{ hover: { scale: 1.06 } }}
-                  transition={{ duration: 0.4, ease: 'easeOut' }}
-                />
+                <div className="project-card__frame-bg">
+                  <motion.video
+                    src={project.desktopVideo}
+                    poster={project.desktopPoster}
+                    aria-label={`Site de ${project.name} no computador`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    variants={{ hover: { scale: 1.06 } }}
+                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                  />
+                </div>
                 <motion.div
                   className="project-card__phone"
                   variants={{ hover: { y: -6 } }}
                   transition={{ duration: 0.4, ease: 'easeOut' }}
                 >
-                  <div className="project-card__phone-bezel">
-                    <video
-                      src={project.mobileVideo}
-                      poster={project.mobilePoster}
-                      aria-label={`Site de ${project.name} no celular`}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    />
-                  </div>
+                  <video
+                    src={project.mobileVideo}
+                    poster={project.mobilePoster}
+                    aria-label={`Site de ${project.name} no celular`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
                 </motion.div>
               </div>
               <div className="project-card__body">
