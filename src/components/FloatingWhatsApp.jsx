@@ -1,5 +1,4 @@
 import { motion } from 'motion/react'
-import WhatsAppIcon from './WhatsAppIcon.jsx'
 import { whatsappLink } from '../data/whatsapp.js'
 import './FloatingWhatsApp.css'
 
@@ -17,7 +16,7 @@ export default function FloatingWhatsApp() {
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
     >
-      <WhatsAppIcon size={28} color="#fff" />
+      <img src="/images/brand/whatsapp-icon.png" alt="WhatsApp" />
     </motion.a>
   )
 }
