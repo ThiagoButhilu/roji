@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import InstagramIcon from './InstagramIcon.jsx'
+import WhatsAppIcon from './WhatsAppIcon.jsx'
 import showcaseProjects from '../data/projects.js'
+import { whatsappLink } from '../data/whatsapp.js'
 import './Hero.css'
 
 const floatingChips = [
@@ -70,6 +72,14 @@ export default function Hero() {
           <div className="hero__actions">
             <a href="#contato" className="btn btn-primary">
               Pedir orçamento
+            </a>
+            <a
+              href={whatsappLink('Olá! Vim pelo site da Roji Studio e quero saber mais.')}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-whatsapp"
+            >
+              <WhatsAppIcon size={18} color="#fff" /> Chamar no WhatsApp
             </a>
             <a
               href="https://instagram.com/roji.studioweb"

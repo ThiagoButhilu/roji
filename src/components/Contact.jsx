@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Send, Check, Loader2, AlertCircle } from 'lucide-react'
 import InstagramIcon from './InstagramIcon.jsx'
+import WhatsAppIcon from './WhatsAppIcon.jsx'
 import Captcha from './Captcha.jsx'
+import { WHATSAPP_NUMBER, whatsappLink } from '../data/whatsapp.js'
 import './Contact.css'
 
 const segments = [
@@ -72,7 +74,25 @@ export default function Contact() {
           <h2 className="contact__title">
             Vamos colocar o seu negócio <span className="italic">no caminho certo?</span>
           </h2>
-          <p>Preencha o formulário ou chame direto no Instagram. Conto como o seu site pode ficar.</p>
+          <p>Chama no WhatsApp, preenche o formulário ou manda direct no Instagram. Conto como o seu site pode ficar.</p>
+
+          <a
+            className="contact__ig-card contact__wa-card"
+            href={whatsappLink('Olá! Vim pelo site da Roji Studio e quero saber mais.')}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contact__ig-avatar contact__wa-avatar">
+              <WhatsAppIcon size={26} color="#fff" />
+            </span>
+            <span className="contact__ig-text">
+              <strong>{WHATSAPP_NUMBER}</strong>
+              <small>Roji Studio | Fala direto comigo</small>
+            </span>
+            <span className="btn btn-whatsapp contact__ig-btn">
+              <WhatsAppIcon size={16} color="#fff" /> Chamar no WhatsApp
+            </span>
+          </a>
 
           <a
             className="contact__ig-card"

@@ -52,7 +52,11 @@
   padding: 20px 22px;
   text-decoration: none;
   max-width: 420px;
-  margin: 0 auto;
+  margin: 0 auto 16px;
+}
+
+.contact__ig-card:last-of-type {
+  margin-bottom: 0;
 }
 
 .contact__ig-avatar {
@@ -64,6 +68,10 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.contact__wa-avatar {
+  background: var(--whatsapp);
 }
 
 .contact__ig-avatar img {
@@ -228,6 +236,6 @@
 
   .contact__ig-card {
     justify-content: flex-start;
-    margin: 0;
+    margin: 0 0 16px;
   }
 }
