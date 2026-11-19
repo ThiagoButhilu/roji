@@ -29,17 +29,82 @@
   font-style: italic;
 }
 
-.projects__head .btn {
-  align-self: center;
+.projects__head-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-.projects__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+.projects__nav {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.projects__nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--carvao);
+  background: transparent;
+  color: var(--carvao);
+  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.projects__nav-btn:hover:not(:disabled) {
+  background: var(--carvao);
+  color: var(--cal);
+}
+
+.projects__nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.projects__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.projects__track::-webkit-scrollbar {
+  display: none;
+}
+
+.projects__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.projects__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--border-soft);
+  transition: background 0.2s ease, width 0.2s ease;
+}
+
+.projects__dot.is-active {
+  background: var(--terracota);
+  width: 22px;
 }
 
 .project-card {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
   background: var(--cal);
   border-radius: var(--radius-lg);
   padding: 16px;
@@ -138,9 +203,21 @@
   text-decoration: underline;
 }
 
-@media (min-width: 760px) {
-  .projects__grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 640px) {
+  .project-card {
+    flex-basis: 56%;
+  }
+}
+
+@media (min-width: 900px) {
+  .project-card {
+    flex-basis: 37%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-card {
+    flex-basis: 29%;
   }
 }
 
@@ -151,7 +228,7 @@
     align-items: flex-end;
   }
 
-  .projects__head .btn {
-    align-self: flex-end;
+  .projects__head-actions {
+    flex-direction: row-reverse;
   }
 }

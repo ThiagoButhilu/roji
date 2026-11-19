@@ -39,6 +39,16 @@ const projects = [
     mobileVideo: '/videos/park-patas-mobile.mp4',
     mobilePoster: '/images/projects/park-patas-mobile-poster.jpg',
   },
+  {
+    name: 'Morada',
+    tag: 'projeto conceito',
+    tagTone: 'salvia',
+    desc: 'Imóveis de alto padrão',
+    desktopVideo: '/videos/morada-desktop.mp4',
+    desktopPoster: '/images/projects/morada-desktop-poster.jpg',
+    mobileVideo: '/videos/morada-mobile.mp4',
+    mobilePoster: '/images/projects/morada-mobile-poster.jpg',
+  },
 ]
 
 export default projects
