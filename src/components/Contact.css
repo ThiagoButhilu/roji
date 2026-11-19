@@ -70,9 +70,6 @@
   flex-shrink: 0;
 }
 
-.contact__wa-avatar {
-  background: var(--whatsapp);
-}
 
 .contact__ig-avatar img {
   width: 100%;

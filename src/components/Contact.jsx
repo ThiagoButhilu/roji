@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Send, Check, Loader2, AlertCircle } from 'lucide-react'
 import InstagramIcon from './InstagramIcon.jsx'
-import WhatsAppIcon from './WhatsAppIcon.jsx'
 import Captcha from './Captcha.jsx'
 import { WHATSAPP_NUMBER, whatsappLink } from '../data/whatsapp.js'
 import './Contact.css'
@@ -83,14 +82,14 @@ export default function Contact() {
             rel="noreferrer"
           >
             <span className="contact__ig-avatar contact__wa-avatar">
-              <WhatsAppIcon size={26} color="#fff" />
+              <img src="/images/brand/whatsapp-icon.png" alt="" />
             </span>
             <span className="contact__ig-text">
               <strong>{WHATSAPP_NUMBER}</strong>
               <small>Roji Studio | Fala direto comigo</small>
             </span>
             <span className="btn btn-whatsapp contact__ig-btn">
-              <WhatsAppIcon size={16} color="#fff" /> Chamar no WhatsApp
+              <img src="/images/brand/whatsapp-icon.png" alt="" className="btn__wa-icon" /> Chamar no WhatsApp
             </span>
           </a>
 

@@ -148,6 +148,12 @@ button {
   background: var(--whatsapp-dark);
 }
 
+.btn__wa-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .btn-outline-light {
   background: transparent;
   color: var(--cal);

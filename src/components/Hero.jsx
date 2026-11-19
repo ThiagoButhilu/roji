@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import InstagramIcon from './InstagramIcon.jsx'
-import WhatsAppIcon from './WhatsAppIcon.jsx'
 import showcaseProjects from '../data/projects.js'
 import { whatsappLink } from '../data/whatsapp.js'
 import './Hero.css'
@@ -79,7 +78,7 @@ export default function Hero() {
               rel="noreferrer"
               className="btn btn-whatsapp"
             >
-              <WhatsAppIcon size={18} color="#fff" /> Chamar no WhatsApp
+              <img src="/images/brand/whatsapp-icon.png" alt="" className="btn__wa-icon" /> Chamar no WhatsApp
             </a>
             <a
               href="https://instagram.com/roji.studioweb"
